@@ -1,18 +1,61 @@
 
-// TODO: Fix skip link...
-
 .skip-link {
-	grid-column: 2 / 3;
-	grid-row: 1 / -1;
 	text-align: center;
 	@include type-overline;
 	text-decoration: none;
-	color: $primary;
-	margin-top: 0.5em;
+	color: #000;
+	opacity: 0.5;
+	margin: 0.15em auto 0;
 	padding: 0;
-	display: inline-block;
+	transition: $transition;
+
+	&:hover {
+		color: #000;
+		opacity: 0.8;
+	}
 }
 
 header {
-	margin-top: 1rem;
+	
+	margin: 0.25rem 1rem 1rem;
+	background: white;
+
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	overflow: hidden;
+	padding: 0;
+
+	.container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0.5rem;
+		padding-left: 5.5rem;
+
+		&::before {
+			content: img('');
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 5rem;
+			@include background;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		.link-github {
+			display: flex;
+			align-items: center;
+			@include button;
+
+			svg {
+				fill: #fff;
+				margin-right: 0.5rem;
+			}
+		}
+	}
 }

@@ -4,6 +4,7 @@
 
 @import './global/variables';
 @import './global/typography';
+@import './global/mixins';
 
 @media (prefers-reduced-motion: reduce) {
 	*, ::before, ::after {
@@ -25,6 +26,7 @@ html {
 *::before,
 *::after {
 	box-sizing: border-box;
+	outline: none;	
 }
 
 head, body {
@@ -44,11 +46,17 @@ svg {
 }
 
 a {
-	outline: none;	
-	color: $primary;
+	color: $primary-darker;
+	transition: $transition;
+
+	&:hover,
+	&:focus {
+		color: $secondary-darker;
+	}
 }
 
 @import 'grid';
+@import 'background';
 
 @import './sections/nav';
 @import './sections/header';

@@ -1,0 +1,13 @@
+
+@mixin background {
+	background: $primary;
+	background: linear-gradient(
+		-45deg, 
+		$primary-darker 25%, 
+		$primary 25%, $primary 50%, 
+		$primary-darker 50%, $primary-darker 75%, 
+		$primary 75%
+	);
+
+	background-size: 75px 75px ;
+}

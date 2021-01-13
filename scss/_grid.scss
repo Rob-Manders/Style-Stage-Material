@@ -2,21 +2,26 @@
 body {
 	display: grid;
 	grid-template-columns: max-content 1fr max-content;
-	grid-template-rows: repeat(3, max-content);
+	grid-template-rows: repeat(4, max-content);
 
-	header {
+	.skip-link {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 	}
 
-	main {
+	header {
 		grid-column: 2 / 3;
 		grid-row: 2 / 3;
 	}
 
+	main {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+	}
+
 	> footer {					// This must be a direct child as there is also a <footer>
 		grid-column: 2 / 3;	// tag within <main>.
-		grid-row: 3 / -1;
+		grid-row: 4 / -1;
 	}
 
 	aside {

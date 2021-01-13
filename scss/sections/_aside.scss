@@ -6,12 +6,15 @@ aside {
 	width: 22rem;
 	// background: orchid;
 	padding: 1rem;
+	padding-left: 0;
 }
 
 .profile .container {
 	background: white;
 	border-radius: $border-radius;
 	box-shadow: $box-shadow;
+	display: flex;
+	flex-direction: column;
 
 	#profile-title {
 		@include type-headline5;
@@ -30,7 +33,8 @@ aside {
 			display: block;
 			width: 100%;
 			height: 150px;
-			background: $primary;
+			// background: $primary;
+			@include background;
 		}
 
 		.profile-title {
@@ -49,6 +53,10 @@ aside {
 		.profile-website {
 			@include type-body1;
 		}
+	}
+
+	> a {
+		@include button;
 	}
 }
 
@@ -81,7 +89,8 @@ aside {
 				display: block;
 				width: 100%;
 				height: 150px;
-				background: $primary;
+				// background: $primary;
+				@include background;
 			}
 
 			li {
@@ -141,16 +150,7 @@ aside {
 		}
 
 		.link-allstyles {
-			cursor: pointer;
-			width: max-content;
-			text-decoration: none;
-			@include type-button;
-			color: white;
-			margin: 0.5rem;
-			padding: 0.75rem 1.25rem;
-			background: $primary;
-			border-radius: $border-radius;
-			box-shadow: $box-shadow;
+			@include button;
 		}
 	}
 }
