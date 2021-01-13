@@ -1,4 +1,10 @@
 
+// These typography presets are based on the material
+// design type system specifications.
+
+// https://material.io/design/typography/the-type-system.html
+
+
 $roboto: 'Roboto', sans-serif;
 
 @mixin type-headline1 {
@@ -8,7 +14,7 @@ $roboto: 'Roboto', sans-serif;
 }
 
 @mixin type-headline2 {
-	font-size: 3.75rem;
+	font-size: 3.25rem;
 	letter-spacing: -0.0313rem;
 	font-weight: 300;
 }
@@ -53,6 +59,7 @@ $roboto: 'Roboto', sans-serif;
 	font-size: 1rem;
 	letter-spacing: 0.0313rem;
 	font-weight: 400;
+	line-height: 1.5;
 }
 
 @mixin type-body2 {

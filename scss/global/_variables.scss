@@ -3,18 +3,17 @@
 
 $page-background: rgb(221, 221, 221);
 
-$surface: #fff;
+$light: #fff;
 
-$on-surface: #000;
-$on-surface-background: rgba(0,0,0,0.12);
+$dark: #000;
+$dark-background: rgba(0,0,0,0.12);
 
 $primary: rgb(104, 59, 183);
-$primary-background: rgba(104, 59, 183, 0.12);
-
 $primary-darker: rgb(81, 46, 168);
+$primary-background: rgba(104, 59, 183, 0.25);
 
 $secondary: rgb(255, 87, 34);
-$secondary-darker: rgb(230, 74, 25);
+$secondary-darker: rgb(219, 57, 8);
 
 
 /// Misc

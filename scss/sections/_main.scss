@@ -1,4 +1,36 @@
 
 main {
-	padding: 1rem;
+	padding: 0 1rem;
+
+	#about .container,
+	#guidelines .container,
+	#contribute {
+		@include container;
+
+		h2 {
+			@include type-headline2;
+			margin: 0;
+		}
+	}
+
+	#guidelines .container > a {
+		@include button;
+		margin: 0;
+	}
+
+	#files .container {
+		padding-bottom: 0.5rem;
+		
+		> a {
+		@include button;
+		display: inline;
+		margin: 0;
+
+			+ a {
+				margin-left: 0.5rem;
+			}
+		}
+
+		
+	}
 }

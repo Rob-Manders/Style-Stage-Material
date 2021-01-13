@@ -3,23 +3,22 @@
 	text-align: center;
 	@include type-overline;
 	text-decoration: none;
-	color: #000;
+	color: $dark;
 	opacity: 0.5;
 	margin: 0.15em auto 0;
 	padding: 0;
 	transition: $transition;
+	line-height: 1;
 
 	&:hover {
-		color: #000;
+		color: $dark;
 		opacity: 0.8;
 	}
 }
 
 header {
-	
-	margin: 0.25rem 1rem 1rem;
+	margin: 0.25rem 1rem 0;
 	background: white;
-
 	border-radius: $border-radius;
 	box-shadow: $box-shadow;
 	overflow: hidden;
@@ -36,6 +35,16 @@ header {
 		padding-left: ($container-height + 1rem);
 		min-height: $container-height;
 
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: $container-height;
+			background-color: $primary;
+		}
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -50,16 +59,6 @@ header {
 			background-repeat: no-repeat;
 			background-position: center center;
 			opacity: 0.9;
-		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: $container-height;
-			background-color: $primary;
 		}
 
 		h1 {
@@ -81,7 +80,7 @@ header {
 			margin: auto 0 0.5rem;
 			
 			svg {
-				fill: #fff;
+				fill: $light;
 				margin-right: 0.5rem;
 			}
 		}

@@ -1,0 +1,28 @@
+
+body > footer {
+	text-align: center;
+	@include type-caption;
+	margin-top: 2rem;
+
+	ul {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+
+		li {
+			display: flex;
+			align-items: center;
+			margin: 0.5em;
+
+			a {
+				display: flex;
+				align-items: center;
+
+				svg {
+					fill: $primary-darker;
+					margin-right: 0.25em;
+				}
+			}
+		}
+	}
+}

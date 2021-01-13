@@ -1,24 +1,24 @@
 
 aside {
-	position: sticky;
-	top: 0;
 	height: 100vh;
 	width: 22rem;
-	// background: orchid;
 	padding: 1rem;
 	padding-left: 0;
 }
 
 .profile .container {
+	position: absolute;
+	top: 1rem;
 	background: white;
 	border-radius: $border-radius;
 	box-shadow: $box-shadow;
 	display: flex;
 	flex-direction: column;
+	width: 21rem;
 
 	#profile-title {
 		@include type-headline5;
-		padding: 0.5rem;
+		padding: 1rem;
 		margin: 0;
 	}
 
@@ -38,11 +38,14 @@ aside {
 		}
 
 		.profile-title {
-			
-
+			span {
+				margin: 0;
+				margin-left: 1rem;
+			}
 			span:first-of-type {
 				display: block;
 				@include type-overline;
+				margin-top: 1rem;
 			}
 
 			@include type-headline5;		
@@ -51,7 +54,16 @@ aside {
 		.profile-author,
 		.profile-twitter,
 		.profile-website {
-			@include type-body1;
+			@include type-body2;
+			margin-left: 1rem;
+		}
+
+		.profile-author {
+			margin-top: 1rem;
+		}
+
+		.profile-website {
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -61,21 +73,21 @@ aside {
 }
 
 #styles {
-	top: 40vh;
-	margin-top: 40vh;
-	height: 60vh;
+	position: absolute;
+	top: 28.5rem;
+	height: calc(100vh - 26rem);
 
 	.container {
 		background: white;
 		border-radius: $border-radius;
 		box-shadow: $box-shadow;
-
+		width: 21rem;
 		display: flex;
 		flex-direction: column;
 
 		h2 {
 			@include type-headline5;
-			padding: 0.5rem;
+			padding: 1rem;
 			margin: 0;
 		}
 
@@ -94,8 +106,7 @@ aside {
 			}
 
 			li {
-				
-				border-bottom: 1px solid $on-surface-background;
+				border-bottom: 1px solid $dark-background;
 				
 				> span {
 					position: relative;
@@ -118,7 +129,7 @@ aside {
 	
 						@include type-subtitle1;
 						text-decoration: none;
-						color: $on-surface;
+						color: $dark;
 	
 						&::before {
 							content: '';
@@ -133,7 +144,7 @@ aside {
 
 						&:hover,
 						&:focus {
-							background: $on-surface-background;
+							background: $dark-background;
 						}
 					}
 

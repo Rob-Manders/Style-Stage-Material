@@ -29,6 +29,14 @@ html {
   outline: none;
 }
 
+*::-moz-selection {
+  background: rgba(104, 59, 183, 0.25);
+}
+
+*::selection {
+  background: rgba(104, 59, 183, 0.25);
+}
+
 head, body {
   margin: 0;
   padding: 0;
@@ -36,10 +44,12 @@ head, body {
 }
 
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.0313rem;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 svg {
@@ -54,7 +64,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #e64a19;
+  color: #db3908;
 }
 
 body {
@@ -188,11 +198,11 @@ nav ul li a {
 
 nav ul li a:hover, nav ul li a:focus {
   color: #000;
-  background: rgba(104, 59, 183, 0.12);
+  background: rgba(104, 59, 183, 0.25);
 }
 
 nav ul li a:active {
-  background: rgba(104, 59, 183, 0.12);
+  background: rgba(104, 59, 183, 0.25);
 }
 
 nav ul li a::before {
@@ -240,6 +250,7 @@ nav ul li:nth-of-type(6) a::before {
   padding: 0;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+  line-height: 1;
 }
 
 .skip-link:hover {
@@ -248,7 +259,7 @@ nav ul li:nth-of-type(6) a::before {
 }
 
 header {
-  margin: 0.25rem 1rem 1rem;
+  margin: 0.25rem 1rem 0;
   background: white;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -272,6 +283,16 @@ header .container {
   min-height: 20rem;
 }
 
+header .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20rem;
+  background-color: #683bb7;
+}
+
 header .container::after {
   content: '';
   position: absolute;
@@ -286,16 +307,6 @@ header .container::after {
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.9;
-}
-
-header .container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 20rem;
-  background-color: #683bb7;
 }
 
 header .container h1 {
@@ -341,7 +352,13 @@ header .container .link-github {
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   margin: auto 0 0.5rem;
+}
+
+header .container .link-github:hover, header .container .link-github:focus {
+  background: #db3908;
 }
 
 header .container .link-github svg {
@@ -350,13 +367,103 @@ header .container .link-github svg {
 }
 
 main {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+main #about .container,
+main #guidelines .container,
+main #contribute {
+  background: #fff;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+}
+
+main #about .container h2,
+main #guidelines .container h2,
+main #contribute h2 {
+  font-size: 3.25rem;
+  letter-spacing: -0.0313rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+main #guidelines .container > a {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.0781rem;
+  font-weight: 500;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #683bb7;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  margin: 0;
+}
+
+main #guidelines .container > a:hover, main #guidelines .container > a:focus {
+  background: #db3908;
+}
+
+main #files .container {
+  padding-bottom: 0.5rem;
+}
+
+main #files .container > a {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.0781rem;
+  font-weight: 500;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #683bb7;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  display: inline;
+  margin: 0;
+}
+
+main #files .container > a:hover, main #files .container > a:focus {
+  background: #db3908;
+}
+
+main #files .container > a + a {
+  margin-left: 0.5rem;
 }
 
 aside {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   height: 100vh;
   width: 22rem;
   padding: 1rem;
@@ -364,6 +471,8 @@ aside {
 }
 
 .profile .container {
+  position: absolute;
+  top: 1rem;
   background: white;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -375,13 +484,14 @@ aside {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 21rem;
 }
 
 .profile .container #profile-title {
   font-size: 1.5rem;
   letter-spacing: 0;
   font-weight: 400;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -407,20 +517,35 @@ aside {
   font-weight: 400;
 }
 
+.profile .container ul .profile-title span {
+  margin: 0;
+  margin-left: 1rem;
+}
+
 .profile .container ul .profile-title span:first-of-type {
   display: block;
   text-transform: uppercase;
   font-size: 0.625rem;
   letter-spacing: 0.0938rem;
   font-weight: 400;
+  margin-top: 1rem;
 }
 
 .profile .container ul .profile-author,
 .profile .container ul .profile-twitter,
 .profile .container ul .profile-website {
-  font-size: 1rem;
-  letter-spacing: 0.0313rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0156rem;
   font-weight: 400;
+  margin-left: 1rem;
+}
+
+.profile .container ul .profile-author {
+  margin-top: 1rem;
+}
+
+.profile .container ul .profile-website {
+  margin-bottom: 1rem;
 }
 
 .profile .container > a {
@@ -446,12 +571,18 @@ aside {
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.profile .container > a:hover, .profile .container > a:focus {
+  background: #db3908;
 }
 
 #styles {
-  top: 40vh;
-  margin-top: 40vh;
-  height: 60vh;
+  position: absolute;
+  top: 28.5rem;
+  height: calc(100vh - 26rem);
 }
 
 #styles .container {
@@ -459,6 +590,7 @@ aside {
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  width: 21rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,7 +604,7 @@ aside {
   font-size: 1.5rem;
   letter-spacing: 0;
   font-weight: 400;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0;
 }
 
@@ -576,5 +708,53 @@ aside {
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#styles .container .link-allstyles:hover, #styles .container .link-allstyles:focus {
+  background: #db3908;
+}
+
+body > footer {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.025rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+body > footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body > footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em;
+}
+
+body > footer ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > footer ul li a svg {
+  fill: #512ea8;
+  margin-right: 0.25em;
 }
 /*# sourceMappingURL=style.css.map */

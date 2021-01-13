@@ -22,7 +22,7 @@ nav {
 		align-items: center;
 		// padding-bottom: 1.3125rem;
 		padding-left: 1rem;
-		border-bottom: 1px solid $on-surface-background;
+		border-bottom: 1px solid $dark-background;
 	}
 
 	ul {
@@ -46,7 +46,7 @@ nav {
 				align-items: center;
 				text-decoration: none;
 				@include type-body2;
-				color: $on-surface;
+				color: $dark;
 				height: 100%;
 				margin: 0;
 				border-radius: $border-radius;
@@ -54,7 +54,7 @@ nav {
 
 				&:hover,
 				&:focus {
-					color: #000;
+					color: $dark;
 					background: $primary-background;
 				}
 

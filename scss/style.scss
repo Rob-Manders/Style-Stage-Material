@@ -1,6 +1,21 @@
 
+// Material for Style Stage by Robert Manders.
+// https://github.com/Rob-Manders
+
+
+// This theme is based on the Material Design specification available at https://material.io/.
+
+// I have attempted to adhere to the Material component specifications as closely as
+// possible, though some concessions may have been made in order to remain within the 
+// confines of the Style Stage guidelines.
+
+
+// External resources used:
+// Normalize.css 8.0.1: https://necolas.github.io/normalize.css/
+// Google Fonts Roboto: https://fonts.google.com/specimen/Roboto
 // Material Design icons: https://material.io/resources/icons/
 // Material Design logo: https://commons.wikimedia.org/wiki/File:Google_Material_Design_Logo.svg
+
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -32,6 +47,10 @@ html {
 	outline: none;	
 }
 
+*::selection {
+	background: $primary-background;
+}
+
 head, body {
 	margin: 0;
 	padding: 0;
@@ -39,6 +58,7 @@ head, body {
 }
 
 body {
+	position: relative;
 	font-family: $roboto;
 	@include type-body1;
 }
