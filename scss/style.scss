@@ -5,6 +5,22 @@
 @import './global/variables';
 @import './global/typography';
 
+@media (prefers-reduced-motion: reduce) {
+	*, ::before, ::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +30,7 @@
 head, body {
 	margin: 0;
 	padding: 0;
-	background: rgb(70, 70, 70);
+	// background: rgb(70, 70, 70);
 }
 
 body {
