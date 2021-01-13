@@ -1,0 +1,32 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import './global/variables';
+@import './global/typography';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+head, body {
+	margin: 0;
+	padding: 0;
+	background: rgb(70, 70, 70);
+}
+
+body {
+	font-family: $roboto;
+	@include type-body1;
+}
+
+svg {
+	height: 1rem;
+	width: 1rem;
+}
+
+@import 'grid';
+
+@import './sections/nav';

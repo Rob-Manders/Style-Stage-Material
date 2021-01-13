@@ -1,0 +1,59 @@
+
+nav {
+	grid-column: 1 / 2;
+	grid-row: 1 / -1;
+	position: sticky;
+	top: 0;
+	background: white;
+	height: 100vh;
+	width: 16rem;
+	padding-top: 4rem;
+
+	&::before {
+		content: 'Navigation';
+		position: absolute;
+		@include type-headline6;
+		top: 0;
+		left: 0;
+		height: 4rem;
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 1.375rem;
+		background-color: moccasin;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		padding-top: 0.25rem;
+
+		li {
+			width: 100%;
+			height: 3rem;
+
+			margin: 0.25rem 0;
+			padding: 0 0.5rem;
+
+			a {
+				text-decoration: none;
+				@include type-body2;
+				color: $on-surface;
+
+				height: 100%;
+
+				display: flex;
+				align-items: center;
+
+				margin: 0;
+
+				border-radius: $border-radius;
+				background-color: orchid;
+			}
+		}
+	}
+}

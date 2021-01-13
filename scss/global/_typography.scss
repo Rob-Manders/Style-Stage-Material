@@ -1,0 +1,82 @@
+
+$roboto: 'Roboto', sans-serif;
+
+@mixin type-headline1 {
+	font-size: 6rem;
+	letter-spacing: -0.0938rem;
+	font-weight: 300;
+}
+
+@mixin type-headline2 {
+	font-size: 3.75rem;
+	letter-spacing: -0.0313rem;
+	font-weight: 300;
+}
+
+@mixin type-headline3 {
+	font-size: 3rem;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+@mixin type-headline4 {
+	font-size: 2.125rem;
+	letter-spacing: 0.0156rem;
+	font-weight: 400;
+}
+
+@mixin type-headline5 {
+	font-size: 1.5rem;
+	letter-spacing: 0;
+	font-weight: 400;
+}
+
+@mixin type-headline6 {
+	font-size: 1.25rem;
+	letter-spacing: 0.0095rem;
+	font-weight: 500;
+}
+
+@mixin type-subtitile1 {
+	font-size: 1rem;
+	letter-spacing: 0.0095rem;
+	font-weight: 400;
+}
+
+@mixin type-subtitle2 {
+	font-size: 0.875rem;
+	letter-spacing: 0.0063rem;
+	font-weight: 500;
+}
+
+@mixin type-body1 {
+	font-size: 1rem;
+	letter-spacing: 0.0313rem;
+	font-weight: 400;
+}
+
+@mixin type-body2 {
+	font-size: 0.875rem;
+	letter-spacing: 0.0156rem;
+	font-weight: 400;
+}
+
+@mixin type-button {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	letter-spacing: 0.0781rem;
+	font-weight: 500;
+}
+
+@mixin type-caption {
+	font-size: 0.75rem;
+	letter-spacing: 0.025rem;
+	font-weight: 400;
+}
+
+@mixin type-overline {
+	text-transform: uppercase;
+	font-size: 0.625rem;
+	letter-spacing: 0.0938rem;
+	font-weight: 400;
+}
