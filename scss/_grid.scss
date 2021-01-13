@@ -1,10 +1,27 @@
 
 body {
 	display: grid;
-	grid-template-columns: max-content 1fr;
-}
+	grid-template-columns: max-content 1fr max-content;
+	grid-template-rows: repeat(3, max-content);
 
-* {
-	grid-column: 2 / -1;
-}
+	header {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
 
+	main {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+	> footer {					// This must be a direct child as there is also a <footer>
+		grid-column: 2 / 3;	// tag within <main>.
+		grid-row: 3 / -1;
+	}
+
+	aside {
+		grid-column: 3 / 4;
+		grid-row: 1 / -1;
+		
+	}
+}

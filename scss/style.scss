@@ -30,7 +30,7 @@ html {
 head, body {
 	margin: 0;
 	padding: 0;
-	// background: rgb(70, 70, 70);
+	background: $page-background;
 }
 
 body {
@@ -43,6 +43,15 @@ svg {
 	width: 1rem;
 }
 
+a {
+	outline: none;	
+	color: $primary;
+}
+
 @import 'grid';
 
 @import './sections/nav';
+@import './sections/header';
+@import './sections/main';
+@import './sections/aside';
+@import './sections/footer';

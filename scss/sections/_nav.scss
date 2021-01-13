@@ -50,7 +50,7 @@ nav {
 				height: 100%;
 				margin: 0;
 				border-radius: $border-radius;
-				transition: 150ms;
+				transition: $transition;
 
 				&:hover,
 				&:focus {

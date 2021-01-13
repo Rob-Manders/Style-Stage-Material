@@ -1,6 +1,8 @@
 
 /// Colours
 
+$page-background: rgb(221, 221, 221);
+
 $surface: #fff;
 
 $on-surface: #000;
@@ -11,4 +13,8 @@ $primary-background: rgba(102, 31, 255, 0.12);
 $primary-opacity: 0.12;
 
 
+/// Misc
+
 $border-radius: 0.25rem;
+$box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+$transition: 200ms ease-in-out;

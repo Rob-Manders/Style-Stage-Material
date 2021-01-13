@@ -31,6 +31,7 @@ html {
 head, body {
   margin: 0;
   padding: 0;
+  background: #dddddd;
 }
 
 body {
@@ -45,16 +46,52 @@ svg {
   width: 1rem;
 }
 
+a {
+  outline: none;
+  color: #661fff;
+}
+
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: max-content 1fr;
-      grid-template-columns: -webkit-max-content 1fr;
-      grid-template-columns: max-content 1fr;
+  -ms-grid-columns: max-content 1fr max-content;
+      grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-columns: max-content 1fr max-content;
+  -ms-grid-rows: (max-content)[3];
+      grid-template-rows: repeat(3, -webkit-max-content);
+      grid-template-rows: repeat(3, max-content);
 }
 
-* {
-  grid-column: 2 / -1;
+body header {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+body main {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+body > footer {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 3 / -1;
+}
+
+body aside {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
 }
 
 nav {
@@ -130,8 +167,8 @@ nav ul li a {
   height: 100%;
   margin: 0;
   border-radius: 0.25rem;
-  -webkit-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -172,5 +209,212 @@ nav ul li:nth-of-type(5) a::before {
 
 nav ul li:nth-of-type(6) a::before {
   background-image: url("https://raw.githubusercontent.com/Rob-Manders/Style-Stage-Material/main/icons/build_circle-black-18dp.svg");
+}
+
+.skip-link {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.0938rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #661fff;
+  margin-top: 0.5em;
+  padding: 0;
+  display: inline-block;
+}
+
+header {
+  margin-top: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 22rem;
+  padding: 1rem;
+}
+
+.profile .container {
+  background: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.profile .container #profile-title {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.profile .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile .container ul::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: #661fff;
+}
+
+.profile .container ul .profile-title {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.profile .container ul .profile-title span:first-of-type {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 0.0938rem;
+  font-weight: 400;
+}
+
+.profile .container ul .profile-author,
+.profile .container ul .profile-twitter,
+.profile .container ul .profile-website {
+  font-size: 1rem;
+  letter-spacing: 0.0313rem;
+  font-weight: 400;
+}
+
+#styles {
+  top: 40vh;
+  margin-top: 40vh;
+  height: 60vh;
+}
+
+#styles .container {
+  background: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#styles .container h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+#styles .container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#styles .container ul::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: #661fff;
+}
+
+#styles .container ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+#styles .container ul li > span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 4.5rem;
+}
+
+#styles .container ul li > span a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.25rem;
+  padding-left: 4.5rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  font-size: 1rem;
+  letter-spacing: 0.0095rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+#styles .container ul li > span a::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: #661fff;
+}
+
+#styles .container ul li > span a:hover, #styles .container ul li > span a:focus {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+#styles .container ul li > span span {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.025rem;
+  font-weight: 400;
+  padding-left: 4.5rem;
+  pointer-events: none;
+}
+
+#styles .container .link-allstyles {
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.0781rem;
+  font-weight: 500;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #661fff;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
 }
 /*# sourceMappingURL=style.css.map */
