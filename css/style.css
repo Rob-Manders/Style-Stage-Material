@@ -119,6 +119,54 @@ body aside {
   grid-row: 1 / -1;
 }
 
+#about .container:first-of-type {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: (max-content)[4];
+      grid-template-rows: repeat(4, -webkit-max-content);
+      grid-template-rows: repeat(4, max-content);
+}
+
+#about .container:first-of-type p {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#about .container:first-of-type h2 {
+  grid-column: 1 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#about .container:first-of-type p:nth-of-type(1) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+#about .container:first-of-type p:nth-of-type(1) {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#about .container:first-of-type p:nth-of-type(1) {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+}
+
+#about .container:first-of-type blockquote {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
+}
+
 nav {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -387,6 +435,31 @@ main #contribute h2 {
   font-size: 3.25rem;
   letter-spacing: -0.0313rem;
   font-weight: 300;
+  margin: 0;
+}
+
+main #about .container:first-of-type > p {
+  padding-right: 1rem;
+  margin: 0.5rem 0;
+}
+
+main #about blockquote {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+main #about blockquote strong {
+  display: block;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+main #about blockquote p {
   margin: 0;
 }
 
