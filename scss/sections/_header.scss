@@ -53,12 +53,10 @@ header {
 			bottom: 0;
 			width: $container-height;
 			background-color: $primary;
-			background-image: url('google_material_design_logo_alpha.svg');
-			// background-blend-mode: screen;
+			background-image: url('https://raw.githubusercontent.com/Rob-Manders/Style-Stage-Material/main/images/google_material_design_logo_alpha.svg');
 			background-size: 90% 90%;
 			background-repeat: no-repeat;
 			background-position: center center;
-			// opacity: 0.9;
 		}
 
 		h1 {

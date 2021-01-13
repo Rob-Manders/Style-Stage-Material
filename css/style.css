@@ -349,7 +349,7 @@ header .container::after {
   bottom: 0;
   width: 20rem;
   background-color: #683bb7;
-  background-image: url("google_material_design_logo_alpha.svg");
+  background-image: url("https://raw.githubusercontent.com/Rob-Manders/Style-Stage-Material/main/images/google_material_design_logo_alpha.svg");
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center center;
