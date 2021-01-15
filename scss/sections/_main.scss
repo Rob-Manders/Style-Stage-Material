@@ -14,6 +14,7 @@ main {
 	}
 
 	@media (max-width: $large) {
+		#main,
 		#about,
 		#guidelines,
 		#contribute,
@@ -69,19 +70,15 @@ main {
 		margin: 0;
 	}
 
-	#files .container {
-		padding-bottom: 0.5rem;
-		
+	#files .container {	
 		> a {
 		@include button;
-		display: inline;
+		display: inline-flex;
 		margin: 0;
 
 			+ a {
 				margin-left: 0.5rem;
 			}
 		}
-
-		
 	}
 }

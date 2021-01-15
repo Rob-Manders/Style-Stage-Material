@@ -76,11 +76,17 @@ header {
 		.link-github {
 			@include button;
 			margin: auto 0 0.5rem;
-			
-			svg {
-				fill: $light;
-				margin-right: 0.5rem;
+
+			span {
+				padding-top: 0.25rem;
+
+				svg {
+					fill: $light;
+					margin-right: 0.5rem;
+				}
 			}
 		}
+			
+			
 	}
 }

@@ -7,7 +7,6 @@ aside {
 }
 
 .profile .container {
-	// position: absolute;
 	top: 1rem;
 	background: white;
 	border-radius: $border-radius;
@@ -165,5 +164,50 @@ aside {
 		.link-allstyles {
 			@include button;
 		}
+	}
+}
+
+@media (max-width: $medium-large) {
+
+	aside {
+		margin: 0;
+		padding: 0 0.5rem 0;
+	}
+
+	.profile .container,
+	#styles {
+		position: unset;
+		
+	}
+
+	.profile {
+		margin-left: auto;
+	}
+
+	#styles {
+		margin-right: auto;
+	}
+}
+
+@media (max-width: $medium-large) {
+
+	aside {
+		margin: 0;
+		padding: 0 0.5rem 0;
+	}
+
+	.profile .container,
+	#styles {
+		position: unset;
+		
+	}
+
+	.profile,
+	#styles {
+		margin: 0 auto;
+	}
+
+	#styles {
+		margin-top: 1rem;
 	}
 }

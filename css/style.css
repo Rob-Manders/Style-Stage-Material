@@ -177,6 +177,108 @@ body aside {
   }
 }
 
+@media (max-width: 1100px) {
+  body {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (max-content)[6];
+        grid-template-rows: repeat(6, -webkit-max-content);
+        grid-template-rows: repeat(6, max-content);
+  }
+  body nav {
+    grid-column: 1 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  body .skip-link {
+    grid-column: 1 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  body header {
+    grid-column: 1 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  body main {
+    grid-column: 1 / -1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  body aside:first-of-type {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  body aside:last-of-type {
+    grid-column: 2 / -1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  body > footer {
+    grid-column: 1 / -1;
+    grid-row: 6 / -1;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (max-content)[7];
+        grid-template-rows: repeat(7, -webkit-max-content);
+        grid-template-rows: repeat(7, max-content);
+  }
+  body nav {
+    grid-column: 1 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  body .skip-link {
+    grid-column: 1 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  body header {
+    grid-column: 1 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  body main {
+    grid-column: 1 / -1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  body aside:first-of-type {
+    grid-column: 1 / -1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  body aside:last-of-type {
+    grid-column: 1 / -1;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  body > footer {
+    grid-column: 1 / -1;
+    grid-row: 7 / -1;
+  }
+}
+
 #about .container:first-of-type {
   display: -ms-grid;
   display: grid;
@@ -503,6 +605,7 @@ header .container .link-github {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2.25rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -513,7 +616,7 @@ header .container .link-github {
   font-weight: 500;
   color: white;
   margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem;
   background: #683bb7;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -527,7 +630,11 @@ header .container .link-github:hover, header .container .link-github:focus {
   background: #db3908;
 }
 
-header .container .link-github svg {
+header .container .link-github span {
+  padding-top: 0.25rem;
+}
+
+header .container .link-github span svg {
   fill: #fff;
   margin-right: 0.5rem;
 }
@@ -557,6 +664,7 @@ main #contribute h2 {
 }
 
 @media (max-width: 1450px) {
+  main #main,
   main #about,
   main #guidelines,
   main #contribute,
@@ -616,6 +724,7 @@ main #guidelines .container > a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2.25rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -626,7 +735,7 @@ main #guidelines .container > a {
   font-weight: 500;
   color: white;
   margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem;
   background: #683bb7;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -640,10 +749,6 @@ main #guidelines .container > a:hover, main #guidelines .container > a:focus {
   background: #db3908;
 }
 
-main #files .container {
-  padding-bottom: 0.5rem;
-}
-
 main #files .container > a {
   cursor: pointer;
   display: -webkit-box;
@@ -652,6 +757,7 @@ main #files .container > a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2.25rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -662,14 +768,16 @@ main #files .container > a {
   font-weight: 500;
   color: white;
   margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem;
   background: #683bb7;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  display: inline;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin: 0;
 }
 
@@ -776,6 +884,7 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2.25rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -786,7 +895,7 @@ aside {
   font-weight: 500;
   color: white;
   margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem;
   background: #683bb7;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -914,6 +1023,7 @@ aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 2.25rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -924,7 +1034,7 @@ aside {
   font-weight: 500;
   color: white;
   margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem;
   background: #683bb7;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
@@ -935,6 +1045,41 @@ aside {
 
 #styles .container .link-allstyles:hover, #styles .container .link-allstyles:focus {
   background: #db3908;
+}
+
+@media (max-width: 1100px) {
+  aside {
+    margin: 0;
+    padding: 0 0.5rem 0;
+  }
+  .profile .container,
+  #styles {
+    position: unset;
+  }
+  .profile {
+    margin-left: auto;
+  }
+  #styles {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  aside {
+    margin: 0;
+    padding: 0 0.5rem 0;
+  }
+  .profile .container,
+  #styles {
+    position: unset;
+  }
+  .profile,
+  #styles {
+    margin: 0 auto;
+  }
+  #styles {
+    margin-top: 1rem;
+  }
 }
 
 body > footer {
