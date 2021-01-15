@@ -1,13 +1,13 @@
 
 aside {
-	height: 100vh;
+	height: max-content;
 	width: 22rem;
 	padding: 1rem;
 	padding-left: 0;
 }
 
 .profile .container {
-	position: absolute;
+	// position: absolute;
 	top: 1rem;
 	background: white;
 	border-radius: $border-radius;
@@ -15,6 +15,7 @@ aside {
 	display: flex;
 	flex-direction: column;
 	width: 21rem;
+	min-height: 441px;
 
 	#profile-title {
 		@include type-headline5;
@@ -69,6 +70,7 @@ aside {
 
 	> a {
 		@include button;
+		margin-top: auto;
 	}
 }
 

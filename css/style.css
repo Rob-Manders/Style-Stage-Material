@@ -78,6 +78,13 @@ body {
       grid-template-rows: repeat(4, max-content);
 }
 
+body nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
 body .skip-link {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -117,6 +124,57 @@ body aside {
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
   grid-row: 1 / -1;
+}
+
+@media (max-width: 1450px) {
+  body {
+    -ms-grid-columns: 1fr max-content;
+        grid-template-columns: 1fr -webkit-max-content;
+        grid-template-columns: 1fr max-content;
+    -ms-grid-rows: (max-content)[5];
+        grid-template-rows: repeat(5, -webkit-max-content);
+        grid-template-rows: repeat(5, max-content);
+  }
+  body nav {
+    grid-column: 1 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  body .skip-link {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  body header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  body main {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  body > footer {
+    grid-column: 1 / -1;
+    grid-row: 5 / -1;
+  }
+  body aside {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+  }
 }
 
 #about .container:first-of-type {
@@ -168,10 +226,6 @@ body aside {
 }
 
 nav {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  grid-row: 1 / -1;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -181,6 +235,7 @@ nav {
   padding-top: 4rem;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 
 nav::before {
@@ -283,6 +338,71 @@ nav ul li:nth-of-type(5) a::before {
 
 nav ul li:nth-of-type(6) a::before {
   background-image: url("https://raw.githubusercontent.com/Rob-Manders/Style-Stage-Material/main/icons/build_circle-black-18dp.svg");
+}
+
+@media (max-width: 1450px) {
+  nav {
+    height: 4.5rem;
+    width: 100%;
+    padding: 0;
+    padding-right: 0.5rem;
+    background: #212121;
+    overflow: hidden;
+  }
+  nav::before {
+    display: none;
+  }
+  nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 100%;
+    padding: 0;
+  }
+  nav ul li {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 100%;
+    padding: 0;
+    margin: 0 1.25rem;
+  }
+  nav ul li a {
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.0313rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  nav ul li a::after {
+    position: absolute;
+    content: '';
+    background: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.25rem;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+  }
+  nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
+    background: none;
+    color: #fff;
+  }
+  nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
+    background: #fff;
+  }
+  nav ul li a::before {
+    display: none;
+  }
 }
 
 .skip-link {
@@ -436,6 +556,15 @@ main #contribute h2 {
   margin: 0;
 }
 
+@media (max-width: 1450px) {
+  main #about,
+  main #guidelines,
+  main #contribute,
+  main #files {
+    scroll-margin-top: 5rem;
+  }
+}
+
 main #about .container:first-of-type > p {
   padding-right: 1rem;
   margin: 0.5rem 0;
@@ -459,6 +588,24 @@ main #about blockquote strong {
 
 main #about blockquote p {
   margin: 0;
+}
+
+main #about .container:last-of-type ul {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #about .container:last-of-type ul li {
+  background: rgba(0, 0, 0, 0.12);
+  margin: 0.25rem 0.5rem;
+  margin-left: 0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
 }
 
 main #guidelines .container > a {
@@ -535,14 +682,15 @@ main #files .container > a + a {
 }
 
 aside {
-  height: 100vh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 22rem;
   padding: 1rem;
   padding-left: 0;
 }
 
 .profile .container {
-  position: absolute;
   top: 1rem;
   background: white;
   border-radius: 0.25rem;
@@ -556,6 +704,7 @@ aside {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 21rem;
+  min-height: 441px;
 }
 
 .profile .container #profile-title {
@@ -644,6 +793,7 @@ aside {
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+  margin-top: auto;
 }
 
 .profile .container > a:hover, .profile .container > a:focus {

@@ -4,6 +4,11 @@ body {
 	grid-template-columns: max-content 1fr max-content;
 	grid-template-rows: repeat(4, max-content);
 
+	nav {
+		grid-column: 1 / 2;
+		grid-row: 1 / -1;
+	}
+	
 	.skip-link {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
@@ -27,7 +32,41 @@ body {
 	aside {
 		grid-column: 3 / 4;
 		grid-row: 1 / -1;
-		
+	}
+
+	@media (max-width: $large) {
+		grid-template-columns: 1fr max-content;
+		grid-template-rows: repeat(5, max-content);
+
+		nav {
+			grid-column: 1 / -1;
+			grid-row: 1 / 2;
+		}
+
+		.skip-link {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	
+		header {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+	
+		main {
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+		}
+	
+		> footer {					// This must be a direct child as there is also a <footer>
+			grid-column: 1 / -1;	// tag within <main>.
+			grid-row: 5 / -1;
+		}
+	
+		aside {
+			grid-column: 2 / 3;
+			grid-row: 2 / -1;
+		}
 	}
 }
 
@@ -36,7 +75,6 @@ body {
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: repeat(4, max-content);
 
-	
 	p {
 		grid-column: 1 / 2;
 	}
@@ -62,4 +100,6 @@ body {
 		grid-column: 2 / 3;
 		grid-row: 2 / -1;
 	}
+
+	
 }
